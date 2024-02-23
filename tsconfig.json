@@ -1,0 +1,12 @@
+{
+  "ts-node": {
+    // "compilerOptions": {
+    //   "inlcude": ["src/**/*.ts", "src/**/*.tsx"]
+    // }
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "strict": true
+    // "esModuleInterop": true
+  }
+}

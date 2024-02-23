@@ -1,0 +1,61 @@
+
+    .img-2 copy {
+      width: 716px;
+      height: 766px;
+      display: inline-block;
+      position: relative;
+      background-image: url('/Users/huangjiepeng/Desktop/鸟人/monorepo-admin/packages/vite-plugin-image2css/example/src/assets/images/2 copy.png');
+      background-size: 716px 766px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+    }
+  
+    .img-2 {
+      width: 716px;
+      height: 766px;
+      display: inline-block;
+      position: relative;
+      background-image: url('/Users/huangjiepeng/Desktop/鸟人/monorepo-admin/packages/vite-plugin-image2css/example/src/assets/images/2.png');
+      background-size: 716px 766px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+    }
+  
+    .img-risktip copy {
+      width: 750px;
+      height: 956px;
+      display: inline-block;
+      position: relative;
+      background-image: url('/Users/huangjiepeng/Desktop/鸟人/monorepo-admin/packages/vite-plugin-image2css/example/src/assets/images/risktip copy.png');
+      background-size: 750px 956px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+    }
+  
+    .img-risktip {
+      width: 750px;
+      height: 956px;
+      display: inline-block;
+      position: relative;
+      background-image: url('/Users/huangjiepeng/Desktop/鸟人/monorepo-admin/packages/vite-plugin-image2css/example/src/assets/images/risktip.png');
+      background-size: 750px 956px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+    }
+  
+    .img-风险提示@2x {
+      width: 750px;
+      height: 932px;
+      display: inline-block;
+      position: relative;
+      background-image: url('/Users/huangjiepeng/Desktop/鸟人/monorepo-admin/packages/vite-plugin-image2css/example/src/assets/images/风险提示@2x.png');
+      background-size: 750px 932px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+    }
+  
