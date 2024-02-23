@@ -1,6 +1,6 @@
 import type Plugin from 'vite'
 import config from './config'
-import image2css from './mods/image2css'
+import image2css, { getOutputCssFilePath } from './mods/image2css'
 import watcher, { getWatchingDir } from './mods/watcher'
 import ctx from './context'
 import chalk from 'chalk'
@@ -25,7 +25,7 @@ export default (options?: PluginOptions):Plugin => {
     name: 'vite-plugin-image2css', // 此名称将出现在警告和错误中
     resolveId (id) {
       if (id === virtualModuleId) {
-        return watchingDir + '/' + config.constants.CSS_OUTPUT_NAME
+        return getOutputCssFilePath()
       }
       return null
     },
