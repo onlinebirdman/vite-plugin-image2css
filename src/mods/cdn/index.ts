@@ -75,27 +75,29 @@ export const upload = async (uploadList, to, watchingDir) => {
   }
 }
 // 获取cdn图片本地文件输出地址
-export function getCdnUrlsFilePath () {
+export function getLockJsonFilePath () {
   return path.resolve(process.cwd(), './image2css-lock.json')
 }
 export function ensureLockJson () {
-  const cdnUrlsFilePath = getCdnUrlsFilePath()
+  const cdnUrlsFilePath = getLockJsonFilePath()
   if (!fs.existsSync(cdnUrlsFilePath)) {
     const defaultContent = {
-      images: {}
+      cdnUrls: {}
     }
-    fs.outputJsonSync(cdnUrlsFilePath, defaultContent)
+    fs.outputJsonSync(cdnUrlsFilePath, defaultContent, { spaces: 2 })
   }
 }
 // 查询缓存
 export function getCdnUrlMap () {
   ensureLockJson()
-  const content = fs.readJsonSync(getCdnUrlsFilePath())
-  return new Map(Object.entries(content || {}))
+  const lockJsonData = fs.readJsonSync(getLockJsonFilePath())
+  return new Map(Object.entries(lockJsonData.cdnUrls || {}))
 }
 // 更新缓存
 function updateCdnUrlMap (cdnUrlMap) {
   const obj = Object.fromEntries(cdnUrlMap)
-  fs.outputJsonSync(getCdnUrlsFilePath(), obj, { space: 2 })
+  const lockJsonData = fs.readJsonSync(getLockJsonFilePath())
+  lockJsonData.cdnUrls = obj
+  fs.outputJsonSync(getLockJsonFilePath(), lockJsonData, { spaces: 2 })
   return cdnUrlMap
 }
