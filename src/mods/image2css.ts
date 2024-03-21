@@ -6,11 +6,12 @@ import config from '../config'
 import fs from 'fs-extra'
 import ctx from '../context'
 import path from 'path'
-
 // css文件输出位置
 export const getOutputCssFilePath = () => {
   const { command } = ctx.pluginConfig
-  const cssFilePath = path.resolve(process.cwd(), `./.image2css/${command}/_image2css.css`)
+  // 这是项目目录下的输出路径
+  const cssFilePath = path.resolve(process.cwd(), `./.dev/.image2css/${command}/_image2css.css`)
+  // 这是依赖目录下的输出路径
   fs.ensureFileSync(cssFilePath)
   return cssFilePath
 }

@@ -1,5 +1,8 @@
 import { getCdnUrlMap } from './cdn'
 import config from '../config'
+import { getOutputCssFilePath } from './image2css'
+import { getWatchingDir } from './watcher'
+import path from 'path'
 /**
  *
  * @param classname string [path]/filename.png => .filename
@@ -13,7 +16,7 @@ function generateCssContent (image): string {
     .${genClassName(image)} {
       width: ${width}px;
       height: ${height}px;
-      display: inline-block;
+      display: block;
       position: relative;
       background-image: url('${genUrl(image)}');
       background-size: ${width}px ${height}px;
@@ -36,6 +39,10 @@ function genUrl (image) {
     const cdnUrlMap = getCdnUrlMap()
     return cdnUrlMap.get(image.hash)
   } else {
+    // 返回相对路径 outputDir to watchingDir
+    // console.log('getWatchingDir()', getWatchingDir())
+    // console.log('getWatchingDir()', getOutputCssFilePath())
+    // console.log('relative path:', path.relative(getWatchingDir(), getOutputCssFilePath()))
     return image.filePath
   }
 }
