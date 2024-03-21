@@ -21,7 +21,7 @@ export default async (targetDirectory) => {
     }
     result.push(imageInfo)
   }
-  fs.outputJsonSync(path.resolve(process.cwd(), `./.image2css/${ctx.pluginConfig.command}/images.json`), result, {
+  fs.outputJsonSync(path.resolve(process.cwd(), `./.dev/.image2css/${ctx.pluginConfig.command}/images.json`), result, {
     spaces: 2
   })
   return result
