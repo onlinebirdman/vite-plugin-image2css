@@ -1,15 +1,15 @@
 {
   "name": "vite-plugin-image2css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "./dist/index.mjs",
   "type": "module",
   "scripts": {
     "build": "npx unbuild",
-    "publish": "pnpm run build && pnpm publish",
+    "pub": "pnpm run build && pnpm publish",
     "dev": "node --loader ts-node/esm src/mods/cdn/index.ts"
   },
-  "fules": [
+  "files": [
     "dist"
   ],
   "keywords": [
