@@ -4,3 +4,5 @@
 > pnpm run dev
 # build
 >>> pnpm run build
+# publish
+>>> pnpm run publish
