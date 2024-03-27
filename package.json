@@ -1,8 +1,14 @@
 {
   "name": "vite-plugin-image2css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "type": "module",
   "scripts": {
     "build": "npx unbuild",
