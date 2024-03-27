@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "npx unbuild",
+    "publish": "pnpm run build && pnpm publish",
     "dev": "node --loader ts-node/esm src/mods/cdn/index.ts"
   },
   "fules": [
