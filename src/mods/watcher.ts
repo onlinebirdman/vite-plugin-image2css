@@ -1,5 +1,4 @@
 import chokidar from 'chokidar'
-import chalk from 'chalk'
 import image2css from './image2css'
 import config from '../config'
 import path from 'path'
@@ -32,7 +31,7 @@ export default async function watcher (watchingDir) {
 
     // console.log(chalk.green('image2css is watching on: ' + watchingDir))
   } catch (error) {
-    console.log(chalk.red(JSON.stringify({ error })))
+    // console.log(chalk.red(JSON.stringify({ error })))
   }
 }
 

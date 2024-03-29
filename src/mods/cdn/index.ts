@@ -1,11 +1,11 @@
-import chalk from 'chalk'
+// import chalk from 'chalk'
 import axios from 'axios'
 import fs from 'fs-extra'
 import FormData from 'form-data'
 import path from 'path'
 const log = console.log
-const info = (msg) => log(chalk.green(msg))
-const error = (msg) => log(chalk.red(msg))
+const info = (msg) => log(msg)
+const error = (msg) => log(msg)
 
 const uploadURL = 'http://183.6.107.160:22889/aliyun-cdn/upload/uploadFile'
 export const upload = async (uploadList, to, watchingDir) => {

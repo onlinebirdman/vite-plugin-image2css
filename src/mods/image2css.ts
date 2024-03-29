@@ -17,6 +17,7 @@ export const getOutputCssFilePath = () => {
 }
 export default async (targetDir) => {
   if (!targetDir) return console.log(chalk.red('请输入目标目录targetDir'))
+  // if (!targetDir) return console.log('请输入目标目录targetDir')
   // 扫描目录
   const images = await scanner(targetDir)
   // 处理上传cdn

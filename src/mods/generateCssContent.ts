@@ -1,8 +1,5 @@
 import { getCdnUrlMap } from './cdn'
 import config from '../config'
-import { getOutputCssFilePath } from './image2css'
-import { getWatchingDir } from './watcher'
-import path from 'path'
 /**
  *
  * @param classname string [path]/filename.png => .filename
@@ -10,7 +7,6 @@ import path from 'path'
  * @returns .filename { [styleCode] }
  */
 function generateCssContent (image): string {
-  const prefix = 'img'
   const { width, height } = image
   const DEFAULT_TEMPLATE = `
     .${genClassName(image)} {
